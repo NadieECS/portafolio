@@ -1,0 +1,18 @@
+.div-bg-main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/fondomain.jpg");
+    background-size: 100vw 100vh;
+
+    align-content: center;
+}
+.div-bg-main>p{
+    color: antiquewhite;
+    top: 50%;
+    left: 50%;
+    position: relative;
+}
+
+body{
+    margin: 0%;
+}
