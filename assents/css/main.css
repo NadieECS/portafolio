@@ -1,18 +1,158 @@
+:root{
+    --10-vw: 10vw;
+}
+
+@font-face {
+    font-family: titulos;
+    src: url('South\ Atlanta\ \(TITULOS\).otf');
+}
+
 .div-bg-main{
+    background-image: url("../img/icon-background.jpg");
+    background-size: 100% 100%;
+    position: absolute;
     width: 100vw;
     height: 100vh;
-    background-image: url("../img/fondomain.jpg");
-    background-size: 100vw 100vh;
-
-    align-content: center;
+    overflow: hidden;
+    z-index: 1;
+    
 }
-.div-bg-main>p{
-    color: antiquewhite;
-    top: 50%;
-    left: 50%;
-    position: relative;
+.class-fondo-temblor{
+  animation: temblar-fondo 1s;
 }
-
 body{
+    padding: 0%;
     margin: 0%;
+    border: 0%;
 }
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Puedes ajustar esto según tus preferencias */
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+  }
+
+.img-foto-marco{
+  padding: 2%;
+    background-color: rgba(0, 0, 0, 0.651);
+    left: 40%;
+    width:fit-content;
+    border-radius: 50%;
+    position: relative;
+    z-index: 11;
+    
+    }
+
+ .img-foto{
+    
+    background-image: url("../img/img-foto.jpg");
+    background-size: var(--10-vw);
+    width: 10vw;
+    height:var(--10-vw);
+    background-repeat: no-repeat;
+    filter: drop-shadow(16px 16px 20px rgb(150, 17, 17));
+
+  }
+
+  .modal-card{
+    text-align: center;
+    position: relative;
+    top: 20vh;
+    left: 25%;
+    width: 50%;
+    height: 50vh;
+    z-index: 10;
+  }
+  .modal-card>div>div>div>h1{
+    position: relative;
+    z-index: 20;
+  }
+
+  .fondo-model-card{
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    position: absolute;
+    background-color: rgba(16, 5, 85, 0.534);
+    border-radius: 10%;
+    filter: blur(40px);
+    animation: flotar 3s infinite;
+    
+  }
+
+
+  .card-no-ver{
+    display: none;
+  }
+
+  @keyframes flotar{
+    0%{
+      top: 0%;
+      filter: hue-rotate(0deg) blur(10px);
+      
+    }
+
+    50%{
+      top: 10%;
+      filter: hue-rotate(90deg) blur(10px);
+    }
+
+    100%{
+      top: 0%;
+      filter: hue-rotate(0deg) blur(10px);
+    }
+  }
+
+  @keyframes modal-card{
+    0%{
+      height: 0vh;
+    }
+    100%{
+      height: 50vh;
+    }
+ 
+    
+  }
+
+  @keyframes caer-modal-1{
+    0%{
+      transform: scale(4);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  @keyframes caer-modal-2{
+    0%{
+      transform: scale(1);
+      filter: invert(90%);
+    }
+    25%{
+      transform: scale(1.5);
+      filter: invert(0%);
+    }
+    50%{
+      transform: scale(1);
+    }
+    75%{
+      transform: scale(1.1);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  @keyframes temblar-fondo{
+   
+    0%  { transform:rotateZ(-1deg); }10% { transform:rotateZ( 1deg)}
+    20% { transform:rotateZ( -1deg); }30% { transform:rotateZ( 1deg)}
+    30% { transform:rotateZ( -1deg); }40% { transform:rotateZ( 1deg)}
+    50% { transform:rotateZ( -1deg); }60% { transform:rotateZ( 1deg)}
+    70% { transform:rotateZ( -1deg); }80% { transform:rotateZ( 1deg)}
+    90% { transform:rotateZ( -1deg); }100% { transform:rotateZ( 1deg)}
+
+    
+  }
