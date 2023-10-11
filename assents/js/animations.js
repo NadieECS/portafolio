@@ -28,8 +28,21 @@ function iniciarAnimaciones(){
             document.getElementById('rowModal').style.display= "block";
             
             document.getElementById('modal-card').style.animation= "modal-card 3s";
+            
+            activarBotones();
 
         },true);
 
     },true);
+
+    
 }
+
+function activarBotones(){
+
+    document.getElementById('flash-luz').style.animation= "flash-luz 0.5s";
+
+}
+
+
+

@@ -69,6 +69,7 @@ body{
   .modal-card>div>div>div>h1{
     position: relative;
     z-index: 20;
+    color: #a79f9f;
   }
 
   .fondo-model-card{
@@ -155,4 +156,34 @@ body{
     90% { transform:rotateZ( -1deg); }100% { transform:rotateZ( 1deg)}
 
     
+  }
+
+  #flash-luz{
+    position: absolute;
+    width: 0vw;
+    height: 20vh;
+    background: radial-gradient(ellipse 50% 64px, #dee5eca4 50%, rgba(255, 255, 255, 0));
+    z-index: 90;
+    top: 80vh;
+    
+  }
+
+  @keyframes flash-luz{
+    0%{
+      width: 0vw;
+    }
+    50%{
+      width: 100vw;
+    }
+    100%{
+      width: 0vw;
+      
+    }
+  }
+
+  #opciones-principales{
+    position: absolute;
+    width: 100vw;
+    bottom: 10vh;
+    z-index: 20;
   }
